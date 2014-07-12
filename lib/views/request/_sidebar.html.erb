@@ -10,6 +10,7 @@
 		</div>
     </p>
      <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => @info_request.user && @info_request.user == @user, :location => 'sidebar' } %>
+     <%= link_to _("Create a widget for this request"), create_widget_path(@info_request) %>
    </div>
     <% if @info_request.described_state != "attention_requested" %>
     <h2><%= _('Offensive? Unsuitable?') %></h2>
